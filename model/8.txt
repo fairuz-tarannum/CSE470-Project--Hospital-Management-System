@@ -1,0 +1,64 @@
+8.The code above is written in Python programming language. In this sample, there are many sectors where you can apply knowledge of code refactoring. Mention each criteria where this code lacks and provide appropriate suggestions to improve. (Hint: Code Smells e.g: Naming Convention, Code length, Assertion etc.)
+
+
+
+Selection Sort
+Selection sort is also quite simple but frequently outperforms bubble sort. If you are choosing between the two, it’s best to just default right to selection sort. With Selection sort, we divide our input list / array into two parts: the sublist of items already sorted and the sublist of items remaining to be sorted that make up the rest of the list. We first find the smallest element in the unsorted sublist and place it at the end of the sorted sublist. Thus, we are continuously grabbing the smallest unsorted element and placing it in sorted order in the sorted sublist. This process continues iteratively until the list is fully sorted.
+def selection_sort(arr):        
+    for i in range(len(arr)):
+        minimum = i
+        
+        for j in range(i + 1, len(arr)):
+            # Select the smallest value
+            if arr[j] < arr[minimum]:
+                minimum = j
+
+        # Place it at the front of the 
+        # sorted end of the array
+        arr[minimum], arr[i] = arr[i], arr[minimum]
+            
+    return arr
+
+naming
+comment
+assertion
+replace temp with query(minimize method call)
+var declare
+
+
+ 
+
+for i in range(0, len(x)):
+    #num
+    m = x[i] 
+    #loc
+    l = i
+
+ 
+
+# Finding the minimum value and its location
+
+    for j in range(i+1, len(x)):
+
+        if(m >x [j]):
+
+            m= x[j]
+
+            l = j
+
+# Now we will do the swapping
+
+    tmpry = m
+
+    x[l] = x[i]
+
+    x[i] = tmpry
+
+ 
+
+print(x)
+
+x=[10,1,20,3,6,2,5,11,15,2,12,14,17,18,29]
+
+ 
+
